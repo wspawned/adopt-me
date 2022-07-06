@@ -17,16 +17,11 @@ const SearchParams = () => {
     }, []);  // eslint-disable-line react-hooks/exhaustive-deps
 
     async function requestPets() {
-        const tempLocation = ""
-        //const res = await fetch(
-        //    `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}
-        //    &breed=${breed}`
-        //);
         const res = await fetch(
             `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
         );
         const json = await res.json();
-        //console.log("---" + JSON.stringify(json));
+
         setPets(json.pets);
     }
 
@@ -91,7 +86,7 @@ const SearchParams = () => {
                 </label>
                 <button>Submit</button>
             </form>
-            <h3>THESE ARE THE RES</h3>
+
             <Results pets={pets} />                    
 
             {/* {pets.map((pet) => (                      ///// inserted to Results.js and curly need to be deleted too
