@@ -10,7 +10,7 @@ const App = () => {
     return (
         <StrictMode>
             <ThemeContext.Provider value={theme}>
-            <BrowserRouter basename="/pet-adoption-app">
+            <BrowserRouter>
                 <header>
                     <Link to="/">Adopt Me!</Link>
                 </header>
